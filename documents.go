@@ -181,7 +181,7 @@ func (dv *DocumentsView) handleInput(event *tcell.EventKey) *tcell.EventKey {
 }
 
 func (dv *DocumentsView) updateStatusBar() {
-	help := "[::b]r[white]: refresh | [::b]n[white]: next page | [::b]p[white]: prev page | [::b]F1[white]: collections | [::b]F2[white]: metrics | [::b]F3[white]: documents | [::b]Ctrl+C[white]: quit"
+	help := "[::b]r[white]: refresh | [::b]n[white]: next page | [::b]p[white]: prev page | [::b]c[white]: collections | [::b]m[white]: metrics | [::b]d[white]: documents | [::b]x[white]: quit"
 	if dv.collection != "" {
 		help = fmt.Sprintf("%s | Collection: %s | Page: %d", help, dv.collection, dv.page)
 		if len(dv.documents) > 0 {

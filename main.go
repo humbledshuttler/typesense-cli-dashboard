@@ -121,18 +121,21 @@ func (a *App) setupPages() {
 
 	a.app.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
 		switch event.Key() {
-		case tcell.KeyCtrlC:
-			a.app.Stop()
-			return nil
-		case tcell.KeyF1:
-			a.pages.SwitchToPage("collections")
-			return nil
-		case tcell.KeyF2:
-			a.pages.SwitchToPage("metrics")
-			return nil
-		case tcell.KeyF3:
-			a.pages.SwitchToPage("documents")
-			return nil
+		case tcell.KeyRune:
+			switch event.Rune() {
+			case 'c':
+				a.pages.SwitchToPage("collections")
+				return nil
+			case 'm':
+				a.pages.SwitchToPage("metrics")
+				return nil
+			case 'd':
+				a.pages.SwitchToPage("documents")
+				return nil
+			case 'x':
+				a.app.Stop()
+				return nil
+			}
 		}
 		return event
 	})

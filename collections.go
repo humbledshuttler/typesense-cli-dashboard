@@ -152,7 +152,7 @@ func (cv *CollectionsView) handleInput(event *tcell.EventKey) *tcell.EventKey {
 }
 
 func (cv *CollectionsView) updateStatusBar() {
-	help := "[::b]r[white]: refresh | [::b]Enter[white]: view documents | [::b]F1[white]: collections | [::b]F2[white]: metrics | [::b]F3[white]: documents | [::b]Ctrl+C[white]: quit"
+	help := "[::b]r[white]: refresh | [::b]Enter[white]: view documents | [::b]c[white]: collections | [::b]m[white]: metrics | [::b]d[white]: documents | [::b]x[white]: quit"
 	if len(cv.collections) > 0 {
 		help = fmt.Sprintf("%s | Collection %d/%d", help, cv.selectedIdx+1, len(cv.collections))
 	}

@@ -54,10 +54,10 @@ typesense-cli --debug
 ## Keyboard Shortcuts
 
 ### Global Navigation
-- `F1`: Switch to Collections view
-- `F2`: Switch to Metrics view
-- `F3`: Switch to Documents view
-- `Ctrl+C`: Quit application
+- `c`: Switch to Collections view
+- `m`: Switch to Metrics view
+- `d`: Switch to Documents view
+- `x`: Quit application
 
 ### Collections View
 - `r`: Refresh collections list
